@@ -29,7 +29,6 @@
             padding: 0; 
             box-sizing: border-box; 
             
-            /* Metin seçmeyi engeller */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -37,9 +36,7 @@
         }
 
         img {
-            /* Resimleri sürükleyip masaüstüne atmayı engeller */
             -webkit-user-drag: none; 
-            /* Resimlere sağ tıklanmasını ve yeni sekmede açılmasını engeller */
             pointer-events: none; 
         }
         
@@ -99,8 +96,6 @@
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            
-            /* Dikey boşluk ~1 cm (yaklaşık 4rem) olarak ayarlandı */
             gap: 4rem 2rem; 
         }
 
@@ -132,7 +127,6 @@
             display: block;
         }
 
-        /* Haber başlıkları modern font ve semi-bold */
         .news-title {
             font-family: var(--font-sans);
             font-size: 18px; 
@@ -165,7 +159,7 @@
 
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; 
             height: 0;
             margin-bottom: 1.2rem;
             background-color: #1c1c1c; 
@@ -180,7 +174,6 @@
             border: none;
         }
 
-        /* Video başlıkları modern font ve semi-bold */
         .video-title {
             font-family: var(--font-sans);
             font-size: 19px;
@@ -224,7 +217,6 @@
         }
     </style>
 </head>
-<!-- oncontextmenu, onselectstart, ondragstart, oncopy işlemleri sayfa genelinde kapatıldı -->
 <body oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;" oncopy="return false;">
 
     <!-- Navigation -->
@@ -246,7 +238,6 @@
 
     <main class="container">
         
-        <!-- Haber Ekran Görüntüleri Alanı -->
         <section id="press-articles" style="padding-top: 10rem;">
             <div class="section-header">
                 <h2>On the Press</h2>
@@ -254,7 +245,6 @@
             
             <div class="news-grid">
                 
-                <!-- 1) TRT Haber -->
                 <a href="https://www.trthaber.com/haber/bilim-teknoloji/turk-ogrenciler-abddeki-robotik-yarismasindan-odulle-dondu-675914.html" target="_blank" class="news-card">
                     <div class="news-image-placeholder">
                         <img src="image_1ebf0a.jpg" alt="TRT Haber">
@@ -263,7 +253,6 @@
                     <div class="news-meta">26 APR 2022 | TRT HABER</div>
                 </a>
 
-                <!-- 2) Milliyet -->
                 <a href="https://www.milliyet.com.tr/vitrin/turk-ogrenciler-abdde-katildiklari-robotik-yarismasindan-odulle-dondu-6744891" target="_blank" class="news-card">
                     <div class="news-image-placeholder">
                         <img src="image_1ec1ea.jpg" alt="Milliyet">
@@ -272,7 +261,6 @@
                     <div class="news-meta">27 APR 2022 | MİLLİYET</div>
                 </a>
 
-                <!-- 3) Twitter (LCDG Ankara) -->
                 <a href="https://x.com/LCDGAnkara/status/1517914234755112961" target="_blank" class="news-card">
                     <div class="news-image-placeholder">
                         <img src="image_1ec249.jpg" alt="Twitter - LCDG Ankara">
@@ -281,7 +269,6 @@
                     <div class="news-meta">23 APR 2022 | X (TWITTER)</div>
                 </a>
 
-                <!-- 4) Twitter (TC_HoustonBK) -->
                 <a href="https://x.com/TC_HoustonBK/status/1517714649457872896" target="_blank" class="news-card">
                     <div class="news-image-placeholder">
                         <img src="image_1ec24e.jpg" alt="Twitter - TC Houston BK">
@@ -290,7 +277,6 @@
                     <div class="news-meta">23 APR 2022 | X (TWITTER)</div>
                 </a>
 
-                <!-- 5) Haber7 -->
                 <a href="https://m.haber7.com/teknoloji/haber/3217070-turk-ogrenciler-abdde-kendi-imkanlariyla-katildiklari-robotik-yarismasindan-odulle-dondu" target="_blank" class="news-card">
                     <div class="news-image-placeholder">
                         <img src="image_1ec2e2.jpg" alt="Haber7">
@@ -302,12 +288,10 @@
             </div>
         </section>
 
-        <!-- YouTube Videoları Alanı -->
         <section id="press-videos" style="padding-top: 1rem;">
             
             <div class="video-grid">
                 
-                <!-- Video 1: A Haber -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/IUqhFtEmnp4" title="06 Angora at World Championship, Turkish A News" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -316,7 +300,6 @@
                     <div class="video-date">01 MAY 2022 | TURKISH A NEWS</div>
                 </div>
 
-                <!-- Video 2: TRT Haber -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/Tsym6Elqav8" title="06 Angora at World Championship TRT Haber" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -325,7 +308,6 @@
                     <div class="video-date">30 APR 2022 | TRT HABER</div>
                 </div>
 
-                <!-- Video 3: NTV -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/kXven9AZANM" title="06 Angora at World Championship, NTV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -334,7 +316,6 @@
                     <div class="video-date">30 APR 2022 | NTV</div>
                 </div>
 
-                <!-- Video 4: Turknet Izmir Regional -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/hrHEe1OsKzY" title="FIRST® Robotics Competition Izmir regional" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -343,7 +324,6 @@
                     <div class="video-date">25 JAN 2023 | TURKNET</div>
                 </div>
 
-                <!-- Video 5: IATHON -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/V6CLq-fnjvE" title="International Hackathon IATHON" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -352,7 +332,6 @@
                     <div class="video-date">26 JAN 2023 | CAN KOÇAK</div>
                 </div>
 
-                <!-- Video 6: Presidency Presenting -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/8p7pX1HxVmE" title="Turkish Presidency-National Sovereignty and Children's Day" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -361,7 +340,6 @@
                     <div class="video-date">25 JAN 2023 | CAN KOÇAK</div>
                 </div>
 
-                <!-- Video 7: Presidency Singing -->
                 <div class="video-card">
                     <div class="video-wrapper">
                         <iframe src="https://www.youtube.com/embed/rb-fqzF2Aho" title="Turkish Presidency-National Sovereignty and Children's Day Singing" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -378,14 +356,11 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            
             <div class="footer-links sans-text">
-                <!-- E-posta adresi güncellendi -->
                 <a href="mailto:can.kocak@iprc.com.tr">EMAIL</a>
                 <a href="https://www.linkedin.com/in/can-koçak" target="_blank">LINKEDIN</a>
             </div>
             
-            <!-- Telif Hakkı (Copyright) -->
             <div class="sans-text" style="font-size: 11px; color: var(--text-muted);">
                 &copy; <script>document.write(new Date().getFullYear())</script> Can Koçak. All rights reserved.
             </div>
